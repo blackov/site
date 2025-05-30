@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Камила против Бородочей</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #f7b733, #fc4a1a);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    p.tagline {
+      font-size: 1.3rem;
+    }
+
+    .gang {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .member {
+      background: #fff;
+      color: #000;
+      border-radius: 15px;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .member:hover {
+      transform: rotate(-2deg) scale(1.05);
+    }
+
+    .member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .fight {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .fight button {
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .fight button:hover {
+      background: #222;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Камила Курмантаева</h1>
+    <p class="tagline">И её банда девочек против хачей</p>
+  </header>
+
+  <section class="gang">
+    <div class="member">
+
+      <h3>Камила</h3>
+      <p>Отдел разведки</p>
+    </div>
+    <div class="member">
+
+      <h3>Ангелина</h3>
+      <p>Специализируется по блондинам</p>
+    </div>
+
+  </section>
+
+  <section class="story" style="padding: 40px 20px; background-color: rgba(255,255,255,0.1);">
+    <h2 style="text-align:center; margin-bottom: 20px;">История Камилы</h2>
+    <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">
+      С ранних лет Камила уже поняла, что хочет ходить по головам бородачей. Пока другие девочки играли в куклы, 
+      она смотрела рилсы о том как накормить обезьяну бананом.
+    </p>
+    <p style="max-width: 700px; margin: 20px auto 0 auto; font-size: 1.1rem; line-height: 1.6;">
+      Годы шли, и Камила собрала вокруг себя команду таких же подруг, для которых слово "бородач" звучало 
+      как личное оскорбление. Они действуют быстро и бесшумно.
+    </p>
+  </section>
+  
+  <section class="instagram" style="text-align:center; padding: 40px 20px; background-color: rgba(0,0,0,0.1);">
+    <h2>Главный злодей</h2>
+    <img src="/insta.jpg" alt="Скриншот Инстаграма Камилы" class="insta-screenshot" />
+  </section>
+  
+  
+
+  <section class="fight">
+    <p>Нажми кнопку, чтобы применить суперсилу Камилы</p>
+    <button onclick="startBattle()">💥 Кнопка</button>
+    <p id="battleResult" style="margin-top:20px; font-weight:bold;"></p>
+  </section>
+
+
+  <script>
+    const results = [
+      'Скинуть рилс про хачей.',
+    ];
+
+    function startBattle() {
+      const result = results[Math.floor(Math.random() * results.length)];
+      document.getElementById('battleResult').textContent = result;
+    }
+  </script>
+
+</body>
+</html>
